@@ -1,0 +1,7 @@
+{
+    "instance": "localhost",
+    "prometheusPort": 9001,
+    "username": "admin",
+    "password": "admin"
+}
+
