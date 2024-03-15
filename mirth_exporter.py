@@ -27,6 +27,9 @@ class MirthStatsCollector(object):
         # instance to poll, held in mirthConfig.json file
         instance = config['instance']
 
+        if instance == 'localhost':
+            instance = 'host.docker.internal'
+
         # initialize mirth api
         service = MirthService(instance=instance, username=config['username'], password=config['password'])
 
