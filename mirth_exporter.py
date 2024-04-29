@@ -31,7 +31,10 @@ class MirthStatsCollector(object):
             instance = 'host.docker.internal'
 
         # initialize mirth api
-        service = MirthService(instance=instance, username=config['username'], password=config['password'])
+        if config.get('mirthPort'):
+            service = MirthService(instance=instance, username=config['username'], password=config['password'], port=config.get('mirthPort'))
+        else:
+            service = MirthService(instance=instance, username=config['username'], password=config['password'])
 
         ableToOpen = False
 

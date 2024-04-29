@@ -23,6 +23,17 @@ The exporter requires a `mirthConfig.json` file in the same directory with the f
 }
 ```
 
+To specify a certain port to point at for Mirth, you can add `mirthPort` in the `mirthConfig.json` file. (Mirth's default port is 8443)
+```json
+{
+  "instance": "MIRTH_INSTANCE_URL",
+  "username": "USERNAME",
+  "password": "PASSWORD",
+  "mirthPort": MIRTH_PORT_NUMBER,
+  "prometheusPort": PROMETHEUS_PORT_NUMBER
+}
+```
+
 ## Metrics
 - **mirth_messages_received_total**: Number of messages received per channel.
 - **mirth_messages_sent_total**: Number of messages sent per channel.

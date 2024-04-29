@@ -1,6 +1,7 @@
 {
     "instance": "localhost",
     "prometheusPort": 9001,
+    "mirthPort": 8443,
     "username": "admin",
     "password": "admin"
 }
