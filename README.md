@@ -11,6 +11,7 @@ This Python script serves as a Prometheus exporter for Mirth Connect, allowing u
 - Python 3.x
 - `prometheus_client` library (`pip install prometheus_client`)
 - `mirthpy` library (`pip install mirthpy`)
+- A running [Prometheus](https://prometheus.io/) server that scrapes the exporter's metrics endpoint. The exporter only exposes the metrics — a Prometheus server is required to collect and store the data (see `prometheus.yml` for an example scrape configuration).
 
 ## Configuration
 The exporter requires a `mirthConfig.json` file in the same directory with the following structure:
